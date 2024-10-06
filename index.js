@@ -25,7 +25,7 @@ mongoose
   });
 
 //   routes
-app.use("/api",router);
+app.use("/health-records",router);
 
 // listener
 app.listen(port, () => {
