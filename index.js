@@ -25,6 +25,9 @@ mongoose
   });
 
 //   routes
+app.get("/",(req,res)=>{
+    res.send("Server is running")
+})
 app.use("/health-records",router);
 
 // listener
