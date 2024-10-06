@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const router = require("./routes/router");
 require("dotenv").config();
 const port = process.env.PORT;
 
@@ -23,7 +24,11 @@ mongoose
     console.log("error in connecting to mongodb", err);
   });
 
+//   routes
+app.use("/api",router);
+
 // listener
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
